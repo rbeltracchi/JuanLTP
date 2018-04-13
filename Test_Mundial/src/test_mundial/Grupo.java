@@ -5,10 +5,21 @@
  */
 package test_mundial;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author juanI
  */
-public class Grupo {
+public class Grupo extends EtapaMundial {
+
+    public Grupo(Equipo local, Equipo visitante) {
+        super(local, visitante);
+    }
+
+    @Override
+    public void getEquiposQueAvanzan(ArrayList<Equipo> Equipos) {
+       
+    }
     
 }

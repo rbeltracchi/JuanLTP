@@ -12,10 +12,10 @@ import java.util.ArrayList;
  * @author juanI
  */
 public class Equipo {
-    
+
     private String nombre;
-    
-        ArrayList<Partido> PartidosJugados = new  ArrayList<>();
+
+    ArrayList<Partido> PartidosJugados = new ArrayList<>();
 
     public String getNombre() {
         return nombre;
@@ -25,8 +25,4 @@ public class Equipo {
         this.nombre = nombre;
     }
 
-   
-
-    
-    
-}
+    }

@@ -16,12 +16,10 @@ public abstract class EtapaMundial {
     private String descripcionEtapa;
 
     ArrayList<Partido> Partidos = new ArrayList<>();
-
+    ArrayList<Equipo> Equipos = new ArrayList<>();
+   
     public EtapaMundial(Equipo local, Equipo visitante) {
-
-       
-        
-        
+    
     }
 
     public String getDescripcionEtapa() {
@@ -39,15 +37,18 @@ public abstract class EtapaMundial {
         
     }
     
-    protected String getPartidos (){
+    protected String getPartidos (ArrayList<Partido>Partidos){
         
-       
+       return Partidos.toString();
         
     }
     
-    public abstract getEquiposQueAvanzan(){
+    public abstract void getEquiposQueAvanzan(ArrayList<Equipo>Equipos);
         
-    }
+  
+        
+        
+    
     
     
 }

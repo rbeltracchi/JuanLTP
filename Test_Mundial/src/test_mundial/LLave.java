@@ -5,10 +5,21 @@
  */
 package test_mundial;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author juanI
  */
-public class LLave {
+public class LLave extends EtapaMundial {
+
+    public LLave(Equipo local, Equipo visitante) {
+        super(local, visitante);
+    }
+
+    @Override
+    public void getEquiposQueAvanzan(ArrayList<Equipo> Equipos) {
+       
+    }
     
 }
