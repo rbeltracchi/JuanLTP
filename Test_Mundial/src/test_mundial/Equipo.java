@@ -25,4 +25,19 @@ public class Equipo {
         this.nombre = nombre;
     }
 
+    public void setPartidosJugados (){
+        
+        for (Partido P : PartidosJugados) {
+             if (this.equals(P.getLocal())||this.equals(P.getVisitante()) );
+             PartidosJugados.add(P.getFecha());
+            
+            
+        }
+        
+       
+       
+        
+    }
+    
+    
     }

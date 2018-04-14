@@ -13,13 +13,17 @@ import java.util.ArrayList;
  */
 public class Grupo extends EtapaMundial {
 
+    private Equipo eq1, eq3, eq4;
+    private Equipo eq2;
+
     public Grupo(Equipo local, Equipo visitante) {
         super(local, visitante);
     }
 
+
     @Override
     public void getEquiposQueAvanzan(ArrayList<Equipo> Equipos) {
-       
+
     }
-    
+
 }

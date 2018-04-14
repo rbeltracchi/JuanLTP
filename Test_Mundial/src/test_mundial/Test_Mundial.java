@@ -18,8 +18,19 @@ public class Test_Mundial {
      */
     public static void main(String[] args) {
 
-        Equipo equipo = new Equipo();
+        Equipo equipo1 = new Equipo();
+        Equipo equipo2 = new Equipo();
+        Equipo equipo3 = new Equipo();
+        Equipo equipo4 = new Equipo();
 
+        Grupo grupo = new Grupo(equipo1, equipo2);
+
+        grupo.Equipos.add(equipo1);
+        grupo.Equipos.add(equipo2);
+        grupo.Equipos.add(equipo3);
+        grupo.Equipos.add(equipo4);
+        
+        
         
     }
 

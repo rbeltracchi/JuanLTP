@@ -21,6 +21,7 @@ public abstract class EtapaMundial {
     public EtapaMundial(Equipo local, Equipo visitante) {
     
     }
+    
 
     public String getDescripcionEtapa() {
         return descripcionEtapa;
