@@ -23,12 +23,8 @@ public class Test_Mundial {
         Equipo equipo3 = new Equipo();
         Equipo equipo4 = new Equipo();
 
-        Grupo grupo = new Grupo(equipo1, equipo2);
+       
 
-        grupo.Equipos.add(equipo1);
-        grupo.Equipos.add(equipo2);
-        grupo.Equipos.add(equipo3);
-        grupo.Equipos.add(equipo4);
         
         
         

@@ -11,16 +11,10 @@ import java.util.Date;
  *
  * @author juanI
  */
-public class Resultado extends Partido {
+public class Resultado {
 
-    private int golesLocal, golesVisitante;
+    private int golesLocal, golesVisitante, puntos = 0;
 
-    
-     Resultado(Date fecha, Equipo local, Equipo visitante) {
-        super(fecha, local, visitante);
-    }
-    
-    
     public int getGolesLocal() {
         return golesLocal;
     }
@@ -37,27 +31,37 @@ public class Resultado extends Partido {
         this.golesVisitante = golesVisitante;
     }
 
-   
-
     public boolean GanoLocal() {
 
         if (golesLocal > golesVisitante) {
+            puntos += 3;
             return true;
+
         } else {
             return false;
         }
 
     }
-    
-    
+
     public boolean Empate() {
 
         if (golesLocal == golesVisitante) {
-            
+            puntos++;
             return true;
         }
         return false;
     }
-    
+
+    public int getPuntos() {
+       
+        if (this.GanoLocal())
+            
+            return puntos;
+        }
+    }
+
+    public void setPuntos(int puntos) {
+        this.puntos = puntos;
+    }
 
 }

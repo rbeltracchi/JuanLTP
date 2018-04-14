@@ -17,6 +17,14 @@ public class Equipo {
 
     ArrayList<Partido> PartidosJugados = new ArrayList<>();
 
+    public ArrayList<Partido> getPartidosJugados() {
+        return PartidosJugados;
+    }
+
+    public void setPartidosJugados(ArrayList<Partido> PartidosJugados) {
+        this.PartidosJugados = PartidosJugados;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -25,11 +33,15 @@ public class Equipo {
         this.nombre = nombre;
     }
 
-    public void setPartidosJugados (){
+    
+    
+    
+    //Se cargan los partidos que jugo el equipo
+    
+    public void setPartidosJugados (Partido p){
         
-        for (Partido P : PartidosJugados) {
-             if (this.equals(P.getLocal())||this.equals(P.getVisitante()) );
-             PartidosJugados.add(P.getFecha());
+        
+             PartidosJugados.add(p);
             
             
         }
@@ -40,4 +52,4 @@ public class Equipo {
     }
     
     
-    }
+    

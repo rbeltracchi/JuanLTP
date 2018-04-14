@@ -13,8 +13,11 @@ import java.util.ArrayList;
  */
 public class LLave extends EtapaMundial {
 
-    public LLave(Equipo local, Equipo visitante) {
-        super(local, visitante);
+    ArrayList<Equipo> Equipos = new ArrayList<>();
+    
+    
+    public LLave() {
+       
     }
 
     @Override
