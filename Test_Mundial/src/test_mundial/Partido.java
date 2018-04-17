@@ -13,7 +13,7 @@ public class Partido {
 
     private Date fecha;
     private Equipo local, visitante;
-    private Resultado resultado;
+    private Resultado resultado = new Resultado();
 
     public Partido(Date fecha, Equipo local, Equipo visitante) {
 
@@ -49,6 +49,8 @@ public class Partido {
 
     public Resultado getResultado() {
 
+        
+        
         return resultado;
     }
 

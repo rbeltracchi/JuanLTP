@@ -11,7 +11,7 @@ import java.util.List;
 public class Grupo extends EtapaMundial {
 
     //arreglo de equipos
-    ArrayList<Equipo> Equipos = new ArrayList<>();
+    ArrayList<Equipo> EquiposQueAvanzan = new ArrayList<>();
 
     //dar puntaje a cada equipo segun sus victorias/empate
     private int getPuntos(Equipo e) {
@@ -37,22 +37,23 @@ public class Grupo extends EtapaMundial {
 
         return puntos;
     }
+    
+    /* 
+    x> n1 y n2
+    x> n1 y n3
+    x >n2 y n3
+    */
+    
+    
 
     //metodo abstracto de la clase padre- devuelve los equipo que avanzan
     @Override
     public ArrayList<Equipo> getEquiposQueAvanzan() {
-
-        //Comparar puntos aca
-        Equipo ganador = new Equipo();
-
-        for (Partido Partido1 : super.getPartidos()) {
-
-            if (getPuntos(Partido1.getLocal()) > getPuntos(ganador));
-            ganador = Partido1.getLocal();
-            ganador.
-
-        }
-
+        
+        ArrayList<Equipo> Equipos = new ArrayList<>();
+        int[] puntos = new int[3];
+        Equipo e = new Equipo();
+        
     }
 
 }

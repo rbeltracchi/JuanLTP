@@ -16,6 +16,10 @@ public class Resultado {
         this.golesLocal = golesLocal;
         this.golesVisitante = golesVisitante;
     }
+    public Resultado(){
+        this.golesLocal = 0;
+        this.golesVisitante = 0;
+    }
 
     public int getGolesLocal() {
         return golesLocal;
