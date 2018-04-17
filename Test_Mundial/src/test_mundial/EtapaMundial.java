@@ -17,13 +17,13 @@ public abstract class EtapaMundial {
 
     ArrayList<Partido> Partidos;
 
+    //se inicializa la lista partidos junto con el constructor 
     public EtapaMundial() {
 
         Partidos = new ArrayList<>();
     }
 
-    
-
+    //aca le va a llegar y va a devolver la descripcion de la etapa
     public String getDescripcionEtapa() {
         return descripcionEtapa;
     }
@@ -32,19 +32,21 @@ public abstract class EtapaMundial {
         this.descripcionEtapa = descripcionEtapa;
     }
 
+    //se agregan los partidos a la lista partidos
     public void addPartido(Partido partido) {
 
         Partidos.add(partido);
 
     }
 
-    protected ArrayList<Partido> getPartidos(){
-        
+    //devuelve la lista de partidos
+    protected ArrayList<Partido> getPartidos() {
 
         return this.Partidos;
 
     }
 
+    //metodo abstracto 
     public abstract ArrayList<Equipo> getEquiposQueAvanzan();
 
 }

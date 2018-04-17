@@ -1,24 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package test_mundial;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * en esta clase definir que equipos pasan a la siguiente ronda
  *
  * @author juanI
  */
 public class Grupo extends EtapaMundial {
-    
-        
-    ArrayList<Equipo> Equipos = new ArrayList<>();
-   
 
-    
+    //arreglo de equipos
+    ArrayList<Equipo> Equipos = new ArrayList<>();
+
+    //dar puntaje a cada equipo segun sus victorias/empate
     private int getPuntos(Equipo e) {
 
         int puntos = 0;
@@ -34,7 +29,7 @@ public class Grupo extends EtapaMundial {
                 puntos += 3;
             }
             if (partidos.getResultado().Empate()) {
-                
+
                 puntos += 1;
             }
 
@@ -42,31 +37,22 @@ public class Grupo extends EtapaMundial {
 
         return puntos;
     }
-    
-    
-    
+
+    //metodo abstracto de la clase padre- devuelve los equipo que avanzan
     @Override
-    public ArrayList<Equipo> getEquiposQueAvanzan(){
-        
+    public ArrayList<Equipo> getEquiposQueAvanzan() {
+
         //Comparar puntos aca
-        Equipo ganador = new Equipo ();
-        
+        Equipo ganador = new Equipo();
+
         for (Partido Partido1 : super.getPartidos()) {
-            
-           if (getPuntos(Partido1.getLocal()) > getPuntos(ganador));
-           ganador = Partido1.getLocal();
-            
-            
-        }
-   
-   
-        
-            
+
+            if (getPuntos(Partido1.getLocal()) > getPuntos(ganador));
+            ganador = Partido1.getLocal();
+            ganador.
+
         }
 
-    
-        
-        
     }
 
-
+}

@@ -8,6 +8,7 @@ package test_mundial;
 import java.util.ArrayList;
 
 /**
+ * Esta clase define el nombre del equipo y cuantos partidos jugo
  *
  * @author juanI
  */
@@ -33,23 +34,11 @@ public class Equipo {
         this.nombre = nombre;
     }
 
-    
-    
-    
     //Se cargan los partidos que jugo el equipo
-    
-    public void setPartidosJugados (Partido p){
-        
-        
-             PartidosJugados.add(p);
-            
-            
-        }
-        
-       
-       
-        
+    public void setPartidosJugados(Partido p) {
+
+        PartidosJugados.add(p);
+
     }
-    
-    
-    
+
+}

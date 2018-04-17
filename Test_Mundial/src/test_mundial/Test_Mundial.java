@@ -5,7 +5,9 @@
  */
 package test_mundial;
 
+import java.time.Instant;
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  *
@@ -18,16 +20,16 @@ public class Test_Mundial {
      */
     public static void main(String[] args) {
 
-        Equipo equipo1 = new Equipo();
-        Equipo equipo2 = new Equipo();
-        Equipo equipo3 = new Equipo();
-        Equipo equipo4 = new Equipo();
+        Equipo arg = new Equipo();
+        Equipo peru = new Equipo();
+        Date fecha = null;
 
-       
+        Partido par = new Partido(fecha, arg, peru);
 
-        
-        
-        
+        arg.setPartidosJugados(par);
+        peru.setPartidosJugados(par);
+
+        System.out.println(arg.getPartidosJugados());
     }
 
 }

@@ -1,19 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package test_mundial;
 
 import java.util.Date;
 
 /**
+ * En esta clase se van a definir los resultados de cada partido
  *
  * @author juanI
  */
 public class Resultado {
 
-    private int golesLocal, golesVisitante, puntos = 0;
+    private int golesLocal, golesVisitante;
+
+    public Resultado(int golesLocal, int golesVisitante) {
+
+        this.golesLocal = golesLocal;
+        this.golesVisitante = golesVisitante;
+    }
 
     public int getGolesLocal() {
         return golesLocal;
@@ -34,7 +36,7 @@ public class Resultado {
     public boolean GanoLocal() {
 
         if (golesLocal > golesVisitante) {
-            puntos += 3;
+
             return true;
 
         } else {
@@ -46,22 +48,10 @@ public class Resultado {
     public boolean Empate() {
 
         if (golesLocal == golesVisitante) {
-            puntos++;
+
             return true;
         }
         return false;
-    }
-
-    public int getPuntos() {
-       
-        if (this.GanoLocal())
-            
-            return puntos;
-        }
-    }
-
-    public void setPuntos(int puntos) {
-        this.puntos = puntos;
     }
 
 }
