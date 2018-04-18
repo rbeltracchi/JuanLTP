@@ -26,26 +26,36 @@ public class Test_Mundial {
         Equipo e3 = new Equipo();
         Equipo e4 = new Equipo();
 
-        //fecha??
-        Date fecha = null;
+       
+                
+                
+                
+        //fecha
+        
+        Date fecha1 = new Date(1992,2,2);
+        Date fecha2 = new Date(1992,3,2);
+        Date fecha3 = new Date(1992,5,2);
+        Date fecha4 = new Date(1992,7,2);
+        Date fecha5 = new Date(1992,6,2);
+        Date fecha6 = new Date(1992,8,2);
 
         //creando partidos. se setean los equipos que van a ser local y visitante
-        Partido p1 = new Partido(fecha, e1, e2);
+        Partido p1 = new Partido(fecha1, e1, e2);
         p1.setLocal(e1);
         p1.setVisitante(e2);
-        Partido p2 = new Partido(fecha, e3, e4);
+        Partido p2 = new Partido(fecha2, e3, e4);
         p1.setLocal(e3);
         p1.setVisitante(e4);
-        Partido p3 = new Partido(fecha, e1, e3);
+        Partido p3 = new Partido(fecha3, e1, e3);
         p1.setLocal(e1);
         p1.setVisitante(e3);
-        Partido p4 = new Partido(fecha, e2, e4);
+        Partido p4 = new Partido(fecha4, e2, e4);
         p1.setLocal(e2);
         p1.setVisitante(e4);
-        Partido p5 = new Partido(fecha, e1, e4);
+        Partido p5 = new Partido(fecha5, e1, e4);
         p1.setLocal(e1);
         p1.setVisitante(e4);
-        Partido p6 = new Partido(fecha, e3, e2);
+        Partido p6 = new Partido(fecha6, e3, e2);
         p1.setLocal(e3);
         p1.setVisitante(e4);
 
@@ -78,6 +88,10 @@ public class Test_Mundial {
         p4.getResultado().setGolesVisitante(4);
         p5.getResultado().setGolesVisitante(6);
         p6.getResultado().setGolesVisitante(1);
+
+        
+    
+
 
     }
 

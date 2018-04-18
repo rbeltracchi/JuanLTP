@@ -18,6 +18,8 @@ public class Equipo {
     private String nombre;
     private int golesRecibidos, golesHechos;
 
+    ArrayList<Partido> PartidosJugados = new ArrayList<>();
+
     public int getGolesRecibidos() {
         return golesRecibidos;
     }
@@ -33,15 +35,46 @@ public class Equipo {
     public void setGolesHechos(int golesHechos) {
         this.golesHechos = golesHechos;
     }
-    
-    public int diferenciaDeGoles (){
-        
-        return golesHechos - golesRecibidos;
-        
-    }
-    
 
-    ArrayList<Partido> PartidosJugados = new ArrayList<>();
+    public int diferenciaDeGoles() {
+
+        /*En este metodo se van a estar buscando los goles que convirtio y recibio cada equipo
+          con el fin de dar una diferencia de goles
+          Se recorrera la lista de los partidos jugados buscando en cuales jugo, se comparara si jugo como visitante o local
+          y asi obtener los goles convertidos o recibidos en cada fecha para luego devolver una diferencia de goles. */
+        int dif = 0;
+
+        for (Partido P : PartidosJugados) {
+
+            if (P.getVisitante().getNombre().equals(this.nombre)) {
+
+                golesHechos += P.getResultado().getGolesLocal();
+                golesRecibidos += P.getResultado().getGolesVisitante();
+
+                if (P.getVisitante().getNombre().equals(this.nombre)) {
+
+                    golesHechos += P.getResultado().getGolesVisitante();
+                    golesRecibidos += P.getResultado().getGolesLocal();
+
+                    if (golesHechos > golesRecibidos) {
+
+                        dif = golesHechos - golesRecibidos;
+
+                    } else if (golesRecibidos > golesHechos) {
+
+                        dif = golesRecibidos - golesHechos;
+
+                    } else if (golesHechos == golesRecibidos) {
+
+                        dif = 0;
+                    }
+
+                }
+            }
+        }
+
+        return dif;
+    }
 
     public ArrayList<Partido> getPartidosJugados() {
         return PartidosJugados;
@@ -66,26 +99,4 @@ public class Equipo {
 
     }
 
-    
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Equipo other = (Equipo) obj;
-        if (!Objects.equals(this.nombre, other.nombre)) {
-            return false;
-        }
-        return true;
-    }
-
-    
-    
 }
